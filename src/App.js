@@ -1,13 +1,11 @@
-import { useState } from 'react';
-import './App.css';
-import ListKotak from './components/ListKotak';
+import { ListKontak } from './components';
 
 function App() {
-  const [nama, setName] = useState('dede');
   return (
-    <div className="App">
+    <div style={{ padding: '30px' }}>
       <h2>Aplikasi Kontak App</h2>
-      <ListKotak nama={nama} />
+      <hr />
+      <ListKontak />
     </div>
   );
 }
