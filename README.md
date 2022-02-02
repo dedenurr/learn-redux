@@ -1,11 +1,9 @@
-# learn-redux
-
-For start Back End
-cd back
+For start Back End,
+cd back,
 and run "npm start"
 
-For start Front End
-cd front
+For start Front End,
+cd front,
 and run "npm start"
 
 for back end i used https://github.com/typicode/json-server
