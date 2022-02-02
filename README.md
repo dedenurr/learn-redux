@@ -1,6 +1,6 @@
 For start Back End,
 cd back,
-and run "npm start"
+and run "json-server --watch db.json"
 
 For start Front End,
 cd front,
