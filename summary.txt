@@ -10,3 +10,6 @@ summary,
 - file reducer kontak ini akan dipanggil didalam file index reducer
 
 
+cara buat redux sumary
+ buat pagenya, buat actionnya, buat reducernya, buat useeffect(di component)
+

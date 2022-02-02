@@ -1,18 +1,24 @@
 import React, { useEffect } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { getListKontak } from '../../actions/kontakAction';
+import { deleteKontak, getListKontak } from '../../actions/kontakAction';
 
 function ListKontak() {
-  const { getListKontakResult, getListKontakLoading, getListKontakError } = useSelector((state) => state.KontakReducer);
+  const { getListKontakResult, getListKontakLoading, getListKontakError, deleteKontakResult } = useSelector((state) => state.KontakReducer);
   const dispatch = useDispatch();
 
   useEffect(() => {
     // Panggil Action Get ListKontak
-    console.log('1. use Effect component did Mount ');
+    // console.log('1. use Effect component did Mount ');
     dispatch(getListKontak());
   }, [dispatch]);
 
+  useEffect(() => {
+    if (deleteKontakResult) {
+      console.log('5. Masuk Komponen Did Update');
+      dispatch(getListKontak());
+    }
+  }, [deleteKontakResult, dispatch]);
   return (
     <div>
       <h4>List Kontak</h4>
@@ -20,7 +26,7 @@ function ListKontak() {
         getListKontakResult.map((kontak) => {
           return (
             <p key={kontak.id}>
-              {kontak.nama} - {kontak.nohp}
+              {kontak.nama} - {kontak.nohp} - <button onClick={() => dispatch(deleteKontak(kontak.id))}>HAPUS</button>
             </p>
           );
         })
