@@ -1,0 +1,15 @@
+summary,
+
+- redux memudahkan kita untuk memanggil nilai/data dari sebuah page ke page lainnya
+- package yang dibutuhkan  "axios", "redux", "react-redux","redux-thunk" 
+- buat folder actions
+- buat folder reducer 
+- buat file index didalam folder reducer
+- buat folder kontak untuk menyimpan store mengenai kontak, (folder ini bisa disesuaikan dengan kebutuhan studi kasus yang akan dibuat, reducer bisa lebih dari satu)
+- buat file reducer(index.js) didalam folder kontak 
+- file reducer kontak ini akan dipanggil didalam file index reducer
+
+
+cara buat redux sumary
+buat pagenya, buat actionnya, buat reducernya, buat useeffect(di component)
+
